@@ -1,0 +1,25 @@
+/* указаны стили для элементов h1, p, ul */
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    color: rgb(115, 72, 224);
+    margin: 0;
+    padding: 20px 0;
+    text-shadow: 2px 2px 1px rgb(255, 255, 255);
+}
+
+p {
+    color: rgb(151, 118, 26);
+}
+
+ul {
+    color: rgb(102, 251, 102);
+}
+
+
+img {
+    display: block;
+    margin: 0 auto;
+}
