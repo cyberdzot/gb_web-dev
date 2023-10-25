@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* сперва настроим внешки - марджины */
+.menu__bar {
+    margin-top: 40px;
+    /* margin-bottom: 620px; */
+}
+
+.home__meta {
+    margin-top: 143px;
+    /* margin-bottom: 103px; */
+}
+
+.home__image {
+    margin-top: 82.71px;
+    margin-bottom: 163.1px;
+}
+
+.brande {
+    padding-top: 97px;
+    padding-bottom: 96px;
+}
+
+.about__text {
+    margin-top: 125px;
+}
+
+/* .features {
+    padding-bottom: 491px;
+} */
+
+.feature1 {
+    margin-top: 140px;
+}
+
+.feature2 {
+    margin-top: 100px;
+}
+
+.feature3 {
+    margin-top: 140px;
+    margin-bottom: 125px;
+}
+
+.secation__title {
+    margin-top: 92px;
+}
+
+.paragraph_services {
+    margin-top: 19px;
+}
+
+.service1 {
+    margin-top: 55px;
+}
+
+.service2 {
+    margin-top: 55px;
+}
+
+.service3 {
+    margin-top: 55px;
+}
