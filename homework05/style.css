@@ -1,0 +1,416 @@
+* {
+    /* обнуляем отступы у всего */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* цвет фона для всей web-страницы */
+    background-color: #020A18;
+}
+
+.top {
+    border-radius: 10px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.03) -41.9%, rgba(255, 255, 255, 0.05) 260.24%);
+}
+
+.centering {
+    /* внутренние отступы слева и справа
+    1146px/2 = 573px */
+    padding-left: calc(50% - 573px);
+    padding-right: calc(50% - 573px);
+}
+
+.container {
+    /* задаёт размер внешнего отступа вокруг элемента */
+    /* сверху и снизу | слева и справа: */
+    margin: 0 auto;
+
+    /* ширина контейнера */
+    width: 1146px;
+}
+
+/* -------------------> FLEX's */
+.flex_top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 128px;
+}
+
+.flex_logos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 99px;
+}
+
+.flex_ai {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 68px;
+}
+
+.flex_about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex_footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.flex_info {
+    display: flex;
+    /*
+    362px  - 31,588..%
+    1146px - 100%
+    */
+    /* width: 31,588%; */
+    /* width: 31,588vw; */
+
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+
+    /* это нужно чтобы элементы не сжимались, игнорируя заданные размеры. */
+    flex-shrink: 0;
+}
+
+/* FLEX's <------------------- */
+
+.header_nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 160px;
+}
+
+.header_link {
+    color: var(--ffffff, #FFF);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-decoration: none;
+    padding: 40px 16px;
+}
+
+.main_content {
+    margin-bottom: 197px;
+}
+
+.top_subtitle {
+    color: var(--3-a-68-b-8, #3A68B8);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 160%;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.top_title {
+    color: var(--ffffff, #FFF);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 55px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+    margin-bottom: 40px;
+    width: 604px;
+}
+
+.top_dsc {
+    color: var(--ffffff, #FFF);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 160%;
+    opacity: 0.7;
+    width: 558px;
+    margin-bottom: 65px;
+}
+
+/* .top_right {
+    width: 414px;
+    height: 415px;
+    flex-shrink: 0;
+} */
+
+.top_button {
+    color: var(--ffffff, #FFF);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-decoration: none;
+    border-radius: 5px;
+    background: var(--3-a-68-b-8, #3A68B8);
+    padding: 1rem 2rem;
+    margin-right: 20px;
+}
+
+.fa-play {
+    margin-right: 10px;
+    color: #fff;
+}
+
+.section_ai {
+    /* отступ сверху */
+    margin-top: 157px;
+
+    /* отступ вниз */
+    margin-bottom: 264px;
+}
+
+.ai_title {
+    color: var(--ffffff, #FFF);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+    width: 484px;
+    margin-bottom: 30px;
+}
+
+.ai_dsc {
+    color: var(--ffffff, #FFF);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 160%;
+    opacity: 0.7;
+    width: 460px;
+    margin-bottom: 65px;
+}
+
+.section_awards {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(3, 362px);
+    justify-content: center;
+    padding-bottom: 243px;
+    /* grid-template-rows: repeat(); */
+
+    /* фиксируем минимальный размер блока
+    не исчезал при минимальных разрешениях */
+    min-width: min-content;
+}
+
+.awards_item {
+    background: #132035;
+    border-radius: 10px;
+    padding: 30px;
+    display: grid;
+    justify-items: center;
+    gap: 30px;
+}
+
+.item_big {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.awards_heading {
+    color: var(--ffffff, #FFF);
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 125%;
+    opacity: 0.7;
+}
+
+/* откалибруем большой блок через 2 класса ниже */
+.awards_item_big_img {
+    margin-bottom: -60px;
+}
+
+.awards_heading_big {
+    margin-bottom: -60px;
+}
+
+.awards_text {
+    color: var(--ffffff, #FFF);
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 160%;
+    opacity: 0.7;
+}
+
+.about_title {
+    color: var(--ffffff, #FFF);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+    width: 548px;
+    padding-bottom: 40px;
+}
+
+.about_dsc {
+    color: var(--ffffff, #FFF);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 160%;
+    opacity: 0.7;
+    width: 460px;
+    padding-bottom: 20px;
+}
+
+.section_about {
+    padding-bottom: 221px;
+}
+
+.footer_titles {
+    color: var(--ffffff, #FFF);
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding-bottom: 33px;
+}
+
+.contacts {
+    color: var(--ffffff, #FFF);
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.footer_about {
+    padding-bottom: 33px;
+}
+
+.footer_about_dsc {
+    color: var(--ffffff, #FFF);
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 100;
+    line-height: normal;
+    opacity: 0.6;
+    width: 261px;
+}
+
+.footer {
+    padding-top: 48px;
+    padding-bottom: 46.11px;
+    border-radius: 10px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.01) -41.9%, rgba(255, 255, 255, 0.03) 260.24%);
+}
+
+.footer_items {
+    /* width: 362px; */
+    /*
+    362px  - 31,588..%
+    1146px - 100%
+    */
+    /* здесь можно было бы задать в процентах
+    чтобы инфа блее центрированной была, но
+    в макете фигмы по другому... */
+    width: 362px;
+}
+
+
+/* ________________________ */
+.top_button:hover,
+.header_link:hover {
+    color: #da9d33;
+}
+
+/* ________________________ */
+/* стилизация для планшета 768-1024 */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .centering {
+        /* внутренние отступы слева и справа
+        768px/2 = 384px */
+        padding-left: calc(50% - 384px);
+        padding-right: calc(50% - 384px);
+    }
+
+    .container {
+        margin: 0 auto;
+        max-width: 768px;
+    }
+
+    .top_subtitle {
+        font-size: 16px;
+    }
+
+    .top_title {
+        font-size: 48px;
+    }
+
+    .flex_top {
+        /* width: 768px; */
+        flex-direction: column;
+    }
+
+    .flex_logos {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 32px;
+        flex-wrap: wrap;
+        max-width: 702px;
+        padding-bottom: 120px;
+    }
+
+    .flex_ai {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hidden_element {
+        /* скрытие элемента */
+        display: none;
+    }
+
+    .section_awards {
+        gap: 32px;
+        grid-template-columns: 362px;
+    }
+
+    .flex_about {
+        flex-direction: column;
+        gap: 64px;
+    }
+
+
+    .awards_item {
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.01) -41.9%, rgba(255, 255, 255, 0.12) 115.68%);
+
+        /* от блюра возможны артефакты, отключил... */
+        /* backdrop-filter: blur(100px); */
+    }
+
+    .flex_footer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 30px;
+    }
+}
